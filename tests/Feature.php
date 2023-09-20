@@ -2,10 +2,7 @@
 
 use NunoMaduro\SkeletonPhp\Example;
 
-it('foo', function () {
-    $example = new Example();
+test('if the array contains only integers', function ($i) {
+    expect($i)->toBeInt();
+})->with(fn (): array => range(1, 99));
 
-    $result = $example->foo();
-
-    expect($result)->toBe('bar');
-});
